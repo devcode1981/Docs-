@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `arm64v8` builds of [the `neo4j` official image](https://hub.docker.com/_/neo4j) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -28,8 +30,8 @@ WARNING:
 -	[`5.1.0-enterprise`, `5-enterprise`, `enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/40a0188175a855bf184b0f7c62475b81ee10e028/5.1.0/enterprise/Dockerfile)
 -	[`4.4.12`, `4.4.12-community`, `4.4`, `4.4-community`](https://github.com/neo4j/docker-neo4j-publish/blob/b9b3c369b2a7d34880ac81681c7d148f733ccc22/4.4.12/community/Dockerfile)
 -	[`4.4.12-enterprise`, `4.4-enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/b9b3c369b2a7d34880ac81681c7d148f733ccc22/4.4.12/enterprise/Dockerfile)
--	[`4.3.19`, `4.3.19-community`, `4.3`, `4.3-community`](https://github.com/neo4j/docker-neo4j-publish/blob/43be1e819ac0ce8289da79285de07722a850072f/4.3.19/community/Dockerfile)
--	[`4.3.19-enterprise`, `4.3-enterprise`](https://github.com/neo4j/docker-neo4j-publish/blob/43be1e819ac0ce8289da79285de07722a850072f/4.3.19/enterprise/Dockerfile)
+
+[![arm64v8/neo4j build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/neo4j.svg?label=arm64v8/neo4j%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/neo4j/)
 
 # Quick reference (cont.)
 
@@ -64,7 +66,7 @@ You can start a Neo4j container like this:
 docker run \
     --publish=7474:7474 --publish=7687:7687 \
     --volume=$HOME/neo4j/data:/data \
-    neo4j
+    arm64v8/neo4j
 ```
 
 which allows you to access neo4j through your browser at [http://localhost:7474](http://localhost:7474).
