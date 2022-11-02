@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `windows-amd64` builds of [the `logstash` official image](https://hub.docker.com/_/logstash) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,9 +26,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.4.3`](https://github.com/docker-library/logstash/blob/53f3e4363437b86496f1a8d53e4348633cb9969d/8/Dockerfile)
--	[`7.17.7`](https://github.com/docker-library/logstash/blob/20756581f2b7799bc39b4e47d47722de4fbf3712/7/Dockerfile)
--	[`6.8.23`](https://github.com/docker-library/logstash/blob/4c31d4c6b43c303275256545b5ac5111afa0f2e1/6/Dockerfile)
+**WARNING:** THIS IMAGE *IS NOT SUPPORTED* ON THE `windows-amd64` ARCHITECTURE
+
+[![winamd64/logstash build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/logstash.svg?label=winamd64/logstash%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/logstash/)
 
 # Quick reference (cont.)
 
