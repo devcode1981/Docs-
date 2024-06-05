@@ -20,16 +20,17 @@ WARNING:
 	The Wallarm Team
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.6.9`, `latest`](https://github.com/wallarm/api-firewall-docker/blob/b0579bf17de8f41b162e150b00a87b95648258ee/0.6.9/Dockerfile)
+-	[`0.7.2`, `latest`](https://github.com/wallarm/api-firewall-docker/blob/0219b73c95231b3fc13824a4a672a8c5356c97a4/0.7.2/Dockerfile)
+-	[`0.7.1`](https://github.com/wallarm/api-firewall-docker/blob/0219b73c95231b3fc13824a4a672a8c5356c97a4/0.7.1/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/wallarm/api-firewall/issues](https://github.com/wallarm/api-firewall/issues)
+	[https://github.com/wallarm/api-firewall/issues](https://github.com/wallarm/api-firewall/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/api-firewall/), [`arm64v8`](https://hub.docker.com/r/arm64v8/api-firewall/), [`i386`](https://hub.docker.com/r/i386/api-firewall/)

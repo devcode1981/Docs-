@@ -20,16 +20,14 @@ WARNING:
 	[The AlmaLinux OS Foundation](https://github.com/AlmaLinux/docker-images)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.5`, `8.5-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-x86_64-default)
--	[`8.5-minimal`, `8.5-minimal-20220510`](https://github.com/AlmaLinux/docker-images/blob/cc33e53ccd8b33288eb3fbce9fd3bc308272c162/Dockerfile-x86_64-minimal)
--	[`latest`, `8`, `8.6`, `8.6-20221101`](https://github.com/AlmaLinux/docker-images/blob/03cdf71dcf08b0563a6be20b91d0d6e0ee686cda/Dockerfile-x86_64-default)
--	[`minimal`, `8-minimal`, `8.6-minimal`, `8.6-minimal-20221101`](https://github.com/AlmaLinux/docker-images/blob/03cdf71dcf08b0563a6be20b91d0d6e0ee686cda/Dockerfile-x86_64-minimal)
--	[`9`, `9.0`, `9.0-20221101`](https://github.com/AlmaLinux/docker-images/blob/fe29bd26cbe2002bbf41bfcdf839ed9022f8a71c/Dockerfile-x86_64-default)
--	[`9-minimal`, `9.0-minimal`, `9.0-minimal-20221101`](https://github.com/AlmaLinux/docker-images/blob/fe29bd26cbe2002bbf41bfcdf839ed9022f8a71c/Dockerfile-x86_64-minimal)
+-	[`8`, `8.10`, `8.10-20240528`](https://github.com/AlmaLinux/container-images/blob/88d9aea4fbb24eee1aaf9184954e583993e750f9/default/amd64/Dockerfile)
+-	[`8-minimal`, `8.10-minimal`, `8.10-minimal-20240528`](https://github.com/AlmaLinux/container-images/blob/88d9aea4fbb24eee1aaf9184954e583993e750f9/minimal/amd64/Dockerfile)
+-	[`latest`, `9`, `9.4`, `9.4-20240530`](https://github.com/AlmaLinux/container-images/blob/ae4de0cbc927f1caf1a9d137d8f6cf69455dffe9/default/amd64/Dockerfile)
+-	[`minimal`, `9-minimal`, `9.4-minimal`, `9.4-minimal-20240530`](https://github.com/AlmaLinux/container-images/blob/ae4de0cbc927f1caf1a9d137d8f6cf69455dffe9/minimal/amd64/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -52,7 +50,7 @@ WARNING:
 
 # AlmaLinux OS
 
-[AlmaLinux OS](https://almalinux.org/) is an Open Source and forever-free enterprise Linux distribution, governed and driven by the community, focused on long-term stability and a robust production-grade platform. AlmaLinux OS is 1:1 binary compatible with RHEL® 8 and it was founded by the team behind the well-established [CloudLinux OS](https://www.cloudlinux.com/all-products/product-overview/cloudlinuxos).
+[AlmaLinux OS](https://almalinux.org/) is an Open Source and forever-free enterprise Linux distribution, governed and driven by the community, focused on long-term stability and a robust production-grade platform. AlmaLinux OS is binary compatible with RHEL®, and it was founded by the team behind the well-established [CloudLinux OS](https://www.cloudlinux.com/all-products/product-overview/cloudlinuxos). Today, the AlmaLinux OS Foundation, run by a community-elected board of directors, owns and manages the operating system.
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/23547f3e976bc000d1a01a47241000f72aec9a40/almalinux/logo.png)
 

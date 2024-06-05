@@ -24,7 +24,7 @@ This project is not actively maintained. See [dshearer/jobber#334](https://githu
 	[Jobber](https://github.com/dshearer/jobber-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -33,7 +33,7 @@ This project is not actively maintained. See [dshearer/jobber#334](https://githu
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/dshearer/jobber-docker/issues](https://github.com/dshearer/jobber-docker/issues)
+	[https://github.com/dshearer/jobber-docker/issues](https://github.com/dshearer/jobber-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/jobber/)

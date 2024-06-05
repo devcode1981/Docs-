@@ -20,14 +20,14 @@ WARNING:
 	[Fedora Release Engineering](https://github.com/fedora-cloud/docker-brew-fedora)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`34`](https://github.com/fedora-cloud/docker-brew-fedora/blob/8adf82f023696a50cf9016a3611e3fe75c7e2cfc/x86_64/Dockerfile)
--	[`35`](https://github.com/fedora-cloud/docker-brew-fedora/blob/906ac31cb72302d7986f729de8dc0b6451214a76/x86_64/Dockerfile)
--	[`36`, `latest`](https://github.com/fedora-cloud/docker-brew-fedora/blob/112d5b6ecc28d8553e441414c1f8791bf1f49073/x86_64/Dockerfile)
--	[`37`, `rawhide`](https://github.com/fedora-cloud/docker-brew-fedora/blob/137355c3944c2caf371c8c2b4d8ff0d111c367d3/x86_64/Dockerfile)
+-	[`38`](https://github.com/fedora-cloud/docker-brew-fedora/blob/793480f5cc9e9ab1c530803fa9c573267b453678/x86_64/Dockerfile)
+-	[`39`](https://github.com/fedora-cloud/docker-brew-fedora/blob/3a007c3e0e2cd2c7e4196e8f534a5de7b0303775/x86_64/Dockerfile)
+-	[`40`, `latest`](https://github.com/fedora-cloud/docker-brew-fedora/blob/e1c3015854b7ccfd458331f5a7a77886c26d7014/x86_64/Dockerfile)
+-	[`41`, `rawhide`](https://github.com/fedora-cloud/docker-brew-fedora/blob/333a04d60e14cc6d735679925ed1da6f05bee622/x86_64/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -35,7 +35,7 @@ WARNING:
 	[Fedora's bugzilla page](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20Container%20Images) or [GitHub](https://github.com/fedora-cloud/docker-brew-fedora/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/fedora/), [`arm32v7`](https://hub.docker.com/r/arm32v7/fedora/), [`arm64v8`](https://hub.docker.com/r/arm64v8/fedora/), [`ppc64le`](https://hub.docker.com/r/ppc64le/fedora/), [`s390x`](https://hub.docker.com/r/s390x/fedora/)
+	[`amd64`](https://hub.docker.com/r/amd64/fedora/), [`arm64v8`](https://hub.docker.com/r/arm64v8/fedora/), [`ppc64le`](https://hub.docker.com/r/ppc64le/fedora/), [`s390x`](https://hub.docker.com/r/s390x/fedora/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/fedora/` directory](https://github.com/docker-library/repo-info/blob/master/repos/fedora) ([history](https://github.com/docker-library/repo-info/commits/master/repos/fedora))  

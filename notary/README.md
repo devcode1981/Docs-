@@ -20,7 +20,7 @@ WARNING:
 	[Docker, Inc.](https://github.com/docker/notary-official-images)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -30,7 +30,7 @@ WARNING:
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker/notary-official-images/issues](https://github.com/docker/notary-official-images/issues)
+	[https://github.com/docker/notary-official-images/issues](https://github.com/docker/notary-official-images/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/notary/), [`arm32v6`](https://hub.docker.com/r/arm32v6/notary/), [`arm64v8`](https://hub.docker.com/r/arm64v8/notary/), [`i386`](https://hub.docker.com/r/i386/notary/), [`ppc64le`](https://hub.docker.com/r/ppc64le/notary/), [`s390x`](https://hub.docker.com/r/s390x/notary/)

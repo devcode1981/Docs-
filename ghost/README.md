@@ -20,19 +20,17 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/ghost)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.22.4`, `5.22`, `5`, `latest`](https://github.com/docker-library/ghost/blob/e38dbd928c334f5ff105962c463007df5f5757b8/5/debian/Dockerfile)
--	[`5.22.4-alpine`, `5.22-alpine`, `5-alpine`, `alpine`](https://github.com/docker-library/ghost/blob/e38dbd928c334f5ff105962c463007df5f5757b8/5/alpine/Dockerfile)
--	[`4.48.6`, `4.48`, `4`](https://github.com/docker-library/ghost/blob/47de7994f338e7619fd680051d08a2889598b460/4/debian/Dockerfile)
--	[`4.48.6-alpine`, `4.48-alpine`, `4-alpine`](https://github.com/docker-library/ghost/blob/47de7994f338e7619fd680051d08a2889598b460/4/alpine/Dockerfile)
+-	[`5.83.0`, `5.83`, `5`, `latest`](https://github.com/docker-library/ghost/blob/24c14ef74f056585dd20f61de0a6ae9a1c51a8e1/5/debian/Dockerfile)
+-	[`5.83.0-alpine`, `5.83-alpine`, `5-alpine`, `alpine`](https://github.com/docker-library/ghost/blob/24c14ef74f056585dd20f61de0a6ae9a1c51a8e1/5/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/ghost/issues](https://github.com/docker-library/ghost/issues)
+	[https://github.com/docker-library/ghost/issues](https://github.com/docker-library/ghost/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/ghost/), [`arm32v6`](https://hub.docker.com/r/arm32v6/ghost/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ghost/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ghost/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ghost/), [`s390x`](https://hub.docker.com/r/s390x/ghost/)
@@ -82,18 +80,32 @@ For upgrading your Ghost container you will want to mount your data to the appro
 
 ## Stateful
 
-Mount your existing content. In this example we also use the Alpine base image.
+Mount your existing content. In this example we also use the Alpine Linux based image.
 
 ```console
-$ docker run -d --name some-ghost -e NODE_ENV=development -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost/content ghost:alpine
+$ docker run -d \
+	--name some-ghost \
+	-e NODE_ENV=development \
+	-e database__connection__filename='/var/lib/ghost/content/data/ghost.db' \
+	-p 3001:2368 \
+	-v /path/to/ghost/blog:/var/lib/ghost/content \
+	ghost:alpine
 ```
+
+Note: `database__connection__filename` is only valid in development mode and is the location for the SQLite database file. If using development mode, it should be set to a writeable path within a persistent folder (bind mount or volume). It is not available in production mode because an external MySQL server is required (see the `docker-compose` example below).
 
 ### Docker Volume
 
 Alternatively you can use a named [docker volume](https://docs.docker.com/storage/volumes/) instead of a direct host path for `/var/lib/ghost/content`:
 
 ```console
-$ docker run -d --name some-ghost -e NODE_ENV=development -v some-ghost-data:/var/lib/ghost/content ghost
+$ docker run -d \
+	--name some-ghost \
+	-e NODE_ENV=development \
+	-e database__connection__filename='/var/lib/ghost/content/data/ghost.db' \
+	-p 3001:2368 \
+	-v some-ghost-data:/var/lib/ghost/content \
+	ghost
 ```
 
 ## Configuration
@@ -121,13 +133,13 @@ While the Docker images do have Ghost-CLI available and do use some of its comma
 
 ## Production mode
 
-To run Ghost for production you'll also need to be running with MySQL 8, https, and a reverse proxy configured with appropriate `X-Forwarded-For`, `X-Forwared-Host`, and `X-Forwarded-Proto` (`https`) headers.
+To run Ghost for production you'll also need to be running with MySQL 8, https, and a reverse proxy configured with appropriate `X-Forwarded-For`, `X-Forwarded-Host`, and `X-Forwarded-Proto` (`https`) headers.
 
 The following example demonstrates some of the necessary configuration for running with MySQL. For more detail, see [Ghost's "Configuration options" documentation](https://ghost.org/docs/config/#configuration-options).
 
-## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker-compose`](https://github.com/docker/compose) or [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
 
-Example `stack.yml` for `ghost`:
+Example `docker-compose.yml` for `ghost`:
 
 ```yaml
 version: '3.1'
@@ -135,7 +147,7 @@ version: '3.1'
 services:
 
   ghost:
-    image: ghost:4-alpine
+    image: ghost:5-alpine
     restart: always
     ports:
       - 8080:2368
@@ -150,15 +162,23 @@ services:
       url: http://localhost:8080
       # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
       #NODE_ENV: development
+    volumes:
+      - ghost:/var/lib/ghost/content
 
   db:
     image: mysql:8.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  ghost:
+  db:
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/57f9907ee5bbeaede8c97f439b9c11bc1081dd75/ghost/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/8b35a43795bda4f4ca1299bee2d02afe2434ee7f/ghost/stack.yml)
 
 Run `docker stack deploy -c stack.yml ghost` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 

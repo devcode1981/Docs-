@@ -24,7 +24,7 @@ This project is no longer maintained. Read [here](https://github.com/ExpressGate
 	[the Express Gateway Team](https://github.com/ExpressGateway/express-gateway)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -33,7 +33,7 @@ This project is no longer maintained. Read [here](https://github.com/ExpressGate
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/ExpressGateway/express-gateway/issues](https://github.com/ExpressGateway/express-gateway/issues)
+	[https://github.com/ExpressGateway/express-gateway/issues](https://github.com/ExpressGateway/express-gateway/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/express-gateway/), [`arm64v8`](https://hub.docker.com/r/arm64v8/express-gateway/), [`ppc64le`](https://hub.docker.com/r/ppc64le/express-gateway/), [`s390x`](https://hub.docker.com/r/s390x/express-gateway/)

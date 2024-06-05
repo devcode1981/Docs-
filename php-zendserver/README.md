@@ -20,7 +20,7 @@ WARNING:
 	[Perforce Software, Inc.](https://github.com/zendtech/php-zendserver-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Slack](https://dockr.ly/slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -54,7 +54,7 @@ Zend Server is the integrated application platform for PHP mobile and web apps. 
 
 ### Boost your Development with Z-Ray
 
-Using Zend Server Z-Ray is akin to wearing X-Ray goggles, effortlessly giving developers deep insight into how their code is running as they are developing it – all without having to change any of their habits or workflow. With Z-Ray, developers can immediately understand the impact of their code changes, enabling them to both improve quality and solve issues long before their code reaches production. In addition to the obvious benefits of this ‘Left Shifting’ – better performance, fewer production issues and faster recovery times – using Z-Ray is also downright fun!
+Using Zend Server Z-Ray is akin to wearing X-Ray goggles, effortlessly giving developers deep insight into how their code is running as they are developing it – all without having to change any of their habits or workflow. With Z-Ray, developers can immediately understand the impact of their code changes, enabling them to both improve quality and solve issues long before their code reaches production. In addition to the obvious benefits of this 'Left Shifting' – better performance, fewer production issues and faster recovery times – using Z-Ray is also downright fun!
 
 ### Powering Continuous Delivery
 
